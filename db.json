@@ -1,0 +1,28 @@
+{
+  "clientes": [
+    {
+      "nombre": "Bruno",
+      "empresa": "Codigo",
+      "email": "Correo@correo.com",
+      "telefono": "1231234123",
+      "notas": "Queremos un producto",
+      "id": 7
+    },
+    {
+      "nombre": "Bruno",
+      "empresa": "Codigo",
+      "email": "Correo@correo.com",
+      "telefono": "1231234123",
+      "notas": "Queremos un producto",
+      "id": 8
+    },
+    {
+      "nombre": "Bruno",
+      "empresa": "asd",
+      "email": "22@gmail.com",
+      "telefono": "2323123",
+      "notas": "asd",
+      "id": 18
+    }
+  ]
+}
