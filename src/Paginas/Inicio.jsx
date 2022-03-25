@@ -33,7 +33,7 @@ const Inicio = () => {
   useEffect(() => {
     const obtenerClientes = async () => {
       try{
-        const url = import.meta.env.VITE_API_URL
+        const url = import.meta.env.VITE_API_URL || 'https://my-json-server.typicode.com/BrunoGN91/api_crm/clientes'
         const resupuesta = await fetch(url);
         const resultado = await resupuesta.json()
           setClientes(resultado)
