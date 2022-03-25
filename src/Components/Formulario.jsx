@@ -37,7 +37,7 @@ const handleValidations = async (values) => {
    try {
     if(cliente.id) {
 
-        const url = `${import.meta.env.VITE_API_URL}/${cliente.id}`;
+        const url = `${import.meta.env.VITE_API_URL}/${cliente.id}` || `https://my-json-server.typicode.com/BrunoGN91/api_crm/clientes/${cliente.id}`
         const respuestaId = await fetch(url, {
             method: 'PUT',
             body: JSON.stringify(values),

@@ -14,7 +14,7 @@ const Inicio = () => {
     if(confirmar) {
       try{
 
-        const url = `${import.meta.env.VITE_API_URL}/${id}`
+        const url = `${import.meta.env.VITE_API_URL}/${id}` || `https://my-json-server.typicode.com/BrunoGN91/api_crm/clientes/${id}`
         const data = await fetch(url, {
           method: "DELETE",
         });

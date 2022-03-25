@@ -17,7 +17,7 @@ const EditarCliente = () => {
       const fetchApi = async () => {
           setCargando(!cargando)
           try{
-              const url = `${import.meta.env.VITE_API_URL}/${params.id}`
+              const url = `${import.meta.env.VITE_API_URL}/${params.id}` || `https://my-json-server.typicode.com/BrunoGN91/api_crm/clientes/${params.id}`
               const data = await fetch(url);
               
               const resultado = await data.json();
