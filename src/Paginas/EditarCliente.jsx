@@ -17,7 +17,7 @@ const EditarCliente = () => {
       const fetchApi = async () => {
           setCargando(!cargando)
           try{
-              const url = `http://localhost:3001/clientes/${params.id}`
+              const url = `${import.meta.env.VITE_API_URL}/${params.id}`
               const data = await fetch(url);
               
               const resultado = await data.json();

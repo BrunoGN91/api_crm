@@ -37,7 +37,7 @@ const handleValidations = async (values) => {
    try {
     if(cliente.id) {
 
-        const url = `http://localhost:3001/clientes/${cliente.id}`;
+        const url = `${import.meta.env.VITE_API_URL}/${cliente.id}`;
         const respuestaId = await fetch(url, {
             method: 'PUT',
             body: JSON.stringify(values),
@@ -50,7 +50,7 @@ const handleValidations = async (values) => {
         console.log(resultado);
 
     } else {
-        const url = 'http://localhost:3001/clientes';
+        const url = import.meta.env.VITE_API_URL;
         const respuesta = await fetch(url, {
             method: 'POST',
             body: JSON.stringify(values),

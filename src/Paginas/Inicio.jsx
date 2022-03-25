@@ -14,7 +14,7 @@ const Inicio = () => {
     if(confirmar) {
       try{
 
-        const url = `http://localhost:3001/clientes/${id}`
+        const url = `${import.meta.env.VITE_API_URL}/${id}`
         const data = await fetch(url, {
           method: "DELETE",
         });
@@ -33,7 +33,7 @@ const Inicio = () => {
   useEffect(() => {
     const obtenerClientes = async () => {
       try{
-        const url = "http://localhost:3001/clientes"
+        const url = import.meta.env.VITE_API_URL
         const resupuesta = await fetch(url);
         const resultado = await resupuesta.json()
           setClientes(resultado)
